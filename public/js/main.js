@@ -5,7 +5,7 @@ function headerScripts() {
     var mainHeaderDropdownFirstToggle = $('.main-header-navigation-dropdown-first')
     var mainHeaderNavigatinListCollection = $('.main-header-navigation-list a')
     var mainHeaderNavigatinItem = $('.main-header-navigation-item')
-    // Dropdown Menu 
+    // Dropdown Menu
     function dropdownMenu() {
         mainHeaderNavigationToggle.on('click', function(e) {
             e.preventDefault();
@@ -19,7 +19,7 @@ function headerScripts() {
             }
         });
     }
-    // Highlight current page in Header section 
+    // Highlight current page in Header section
     function activeMenu() {
         var url = window.location.href;
         mainHeaderNavigatinListCollection.filter(function() {
@@ -31,7 +31,7 @@ function headerScripts() {
             headerActiveItem.closest(mainHeaderDropdownFirstToggle).addClass('active');
         }
     }
-    // Menu toggle 
+    // Menu toggle
     function toggleMenu() {
         var toggleIcon = $('.main-header-toggle')
         var wrapper = $('.page-wrapper')
@@ -54,6 +54,8 @@ function headerScripts() {
     activeMenu()
     toggleMenu()
 }
+
+
 function backgroundParallax() {
     var backgroundParallaxCollection = $('.background-parallax-item')
     var backgroundParallax = $('.background-parallax')
@@ -85,7 +87,7 @@ function reviewSlider () {
         speed: 2000,
     });
 }
-// Forms Validtion and Stylization 
+// Forms Validtion and Stylization
 function textareaStylization() {
     var textarea = $('textarea');
     function textareaAutoGrow(el) {
@@ -118,7 +120,7 @@ function appointmentFormValidation() {
         messages: {
             appemail: {
                 required: 'Please enter your Email.',
-                email: 'This Email is not valid', 
+                email: 'This Email is not valid',
             },
             appname: {
                 required: 'Please enter your Name.',
@@ -154,7 +156,7 @@ function appointmentFormValidation() {
                     setTimeout(function() {
                         appointmentFormButton.removeClass('error').text('Send')
                     }, 3000)
-                }         
+                }
             });
         }
     })
@@ -181,7 +183,7 @@ function contactFormValidation() {
         messages: {
             conemail: {
                 required: 'Please enter your Email.',
-                email: 'This Email is not valid', 
+                email: 'This Email is not valid',
             },
             conname: {
                 required: 'Please enter your Name.',
@@ -217,7 +219,7 @@ function contactFormValidation() {
                     setTimeout(function() {
                         contactFormButton.removeClass('error').text('Send')
                     }, 3000)
-                }         
+                }
             });
         }
     })
@@ -241,7 +243,7 @@ function commentFormValidation() {
         messages: {
             Commail: {
                 required: 'Please enter your Email.',
-                email: 'This Email is not valid', 
+                email: 'This Email is not valid',
             },
             Comname: {
                 required: 'Please enter your Name.',
@@ -274,7 +276,7 @@ function commentFormValidation() {
                     setTimeout(function() {
                         commentFormButton.removeClass('error').text('Send')
                     }, 3000)
-                }         
+                }
             });
         }
     })
@@ -297,7 +299,7 @@ function blogGrid() {
         percentPosition: true,
     });
 }
-function googleMapsInit() {
+/*function googleMapsInit() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
@@ -307,14 +309,14 @@ function googleMapsInit() {
         scrollwheel: false,
         disableDoubleClickZoom: true,
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(54.857917, 83.111232), // Change This position and see down 
+        center: new google.maps.LatLng(54.857917, 83.111232), // Change This position and see down
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('google-map');
 
@@ -328,7 +330,7 @@ function googleMapsInit() {
         map: map,
         title: 'My Wokring Center',
     });
-}
+}*/
 // Home Slider Init
 function homeSlider () {
     var home = new Swiper('.home-slider .swiper-container', {
@@ -339,7 +341,7 @@ function homeSlider () {
         speed: 2500,
     });
 }
-// Price range Slider Configuration 
+// Price range Slider Configuration
 function priceRangeSlider() {
     if ($('div').is('.sidebar-price')) {
         var priceSliderCounter = $('.sidebar-item-form-range > span');
@@ -355,7 +357,7 @@ function priceRangeSlider() {
         }).on('slideStop', function(price) {
             priceSliderCounter.text('$' + price.value[0] + ' - ' + '$' + price.value[1])
         })
-        priceSliderCounter.text('$' + priceSliderInput.slider('getValue')[0] + ' - ' + '$' + priceSliderInput.slider('getValue')[1]) 
+        priceSliderCounter.text('$' + priceSliderInput.slider('getValue')[0] + ' - ' + '$' + priceSliderInput.slider('getValue')[1])
     }
 };
 function shopItem() {
@@ -400,9 +402,9 @@ function modal() {
             modalWrapper.removeClass('open');
         })
     }
-    $(document).mouseup(function (e){ 
+    $(document).mouseup(function (e){
         var div = $('.modal-item');
-        if (!div.is(e.target) && div.has(e.target).length === 0) { 
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
             modalWrapper.removeClass('open');
         }
     });
@@ -424,7 +426,7 @@ function shopCart() {
             1 > numberNew ? input.val("1") : input.val(numberNew);
     })
 }
-// Gallery 
+// Gallery
 function gallery() {
     // Masonry Without Gutter
     var galleryMasonryNoGutter = $('.gallery-block-masonry-nogutter')
@@ -486,7 +488,7 @@ function gallery() {
         });
     }
 }
-// Gallery Item 
+// Gallery Item
 function galleryItem() {
     var galleryItem = $('.gallery-item-gallery-item')
     var galleryItemGallery = $('.gallery-item-gallery')
@@ -494,7 +496,7 @@ function galleryItem() {
     function galleryItemChange() {
         if (galleryItem.hasClass('active')) {
             galleryItemContainer.attr('style', 'background-image: url("' + $('.gallery-item-gallery-item.active > img').attr('data-src') + '"');
-        } 
+        }
     }
     galleryItem.on( 'click', function() {
         galleryItemGallery.find('.gallery-item-gallery-item.active').removeClass('active');
@@ -503,7 +505,7 @@ function galleryItem() {
     });
     galleryItemChange();
 }
-// Preloader 
+// Preloader
 $(".preloader").fakeLoader({
     timeToHide:1200, //Time in milliseconds for fakeLoader disappear
     zIndex:"999",//Default zIndex
@@ -513,16 +515,16 @@ $(".preloader").fakeLoader({
 
 $(document).ready(function() {
     'use strict'
-    // images PolyFill 
+    // images PolyFill
     objectFitImages();
-    // header 
+    // header
     headerScripts()
     // Parallax
     $(window).stellar();
     backgroundParallax();
     // CounterUp
     counterUp();
-    // Smooth Scroll 
+    // Smooth Scroll
     $('body').easeScroll({
 		frameRate: 60,
 		animationTime: 1000,
@@ -537,32 +539,32 @@ $(document).ready(function() {
 	});
     // Review Slider Init
     reviewSlider();
-    // Forms Validtion and Stylization 
+    // Forms Validtion and Stylization
     textareaStylization();
     appointmentFormValidation();
     contactFormValidation();
     commentFormValidation();
-    // Blog Block Masonry 
+    // Blog Block Masonry
     blogGrid();
-    // Home Slider 
+    // Home Slider
     homeSlider();
-    // Price Range Slider 
+    // Price Range Slider
     priceRangeSlider();
-    // Shop Item 
+    // Shop Item
     shopItem();
     shopItemSlider();
-    // Shop Cart 
+    // Shop Cart
     shopCart();
-    // Select Customization 
+    // Select Customization
     $('select').selectpicker();
-    // Gallery 
+    // Gallery
     gallery();
     galleryItem();
-    // Modal 
+    // Modal
     modal();
-    // Newsletter 
+    // Newsletter
     newsletter();
-    // Tabs 
+    // Tabs
     var tabsLink = $('.tabs-block > .tabs > li > a');
     var tabPane = $('.tab-pane');
     var tabBlock = $('.tabs-block');
@@ -581,11 +583,11 @@ $(document).ready(function() {
     })
 });
 
-// Google Maps Init 
+// Google Maps Init
 if ($('div').is($('#google-map'))) {
     google.maps.event.addDomListener(window, 'load', googleMapsInit);
-}	
-// IE Masonry Fix 
+}
+// IE Masonry Fix
 $(window).on('scroll', function() {
     'use strict'
     var blogMasonry = $('.blog-masonry');
@@ -596,7 +598,7 @@ $(window).on('scroll', function() {
             blogMasonry.masonry({
                 itemSelector: '.blog-small-wrapper',
                 percentPosition: true,
-            });     
+            });
         }
     }
     if (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) || /Edge\/\d./i.test(navigator.userAgent)) {

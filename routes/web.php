@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,17 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',
-    [HomeController::class, 'index']
+    [MainController::class, 'getIndex']
 )->name('home');
 
+Route::get('about',
+    [MainController::class, 'getAbout']
+)->name('about');
+
+Route::get('projects',
+    [MainController::class, 'getProjects']
+)->name('projects');
+
+Route::get('contact',
+    [MainController::class, 'getContact']
+)->name('contact');
