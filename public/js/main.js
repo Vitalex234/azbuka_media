@@ -583,10 +583,7 @@ $(document).ready(function() {
     })
 });
 
-// Google Maps Init
-if ($('div').is($('#google-map'))) {
-    google.maps.event.addDomListener(window, 'load', googleMapsInit);
-}
+
 // IE Masonry Fix
 $(window).on('scroll', function() {
     'use strict'

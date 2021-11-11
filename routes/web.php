@@ -26,6 +26,14 @@ Route::get('projects',
     [MainController::class, 'getProjects']
 )->name('projects');
 
+Route::get('project/{projectId}',
+    [MainController::class, 'getProject']
+)->name('projectItem');
+
+Route::get('news/{newsId}',
+    [MainController::class, 'getNewsItem']
+)->name('newsItem');
+
 Route::get('contact',
     [MainController::class, 'getContact']
 )->name('contact');

@@ -55,38 +55,6 @@ function headerScripts() {
     toggleMenu()
 }
 
-ymaps.ready(init);
-
-function init() {
-    var myMap = new ymaps.Map("yandex-map", {
-        center: [53.214610, 50.222795],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 17,
-        controls: ['zoomControl']
-    }),
-        myGeoObject = new ymaps.GeoObject({
-            // Описание геометрии.
-            geometry: {
-                type: "Point",
-                coordinates: [53.214610, 50.222795]
-            },
-            // Свойства.
-            properties: {
-                // Контент метки.
-                iconContent: '<b>Азбука медиа</b>',
-                hintContent: '<p>ул. 22 Партсъезда, д. 52, комн. 14</p>'
-            }
-        }, {
-            // Опции.
-            // Иконка метки будет растягиваться под размер ее содержимого.
-            preset: 'islands#darkOrangeStretchyIcon',
-
-        });
-
-    myMap.geoObjects.add(myGeoObject);
-}
-
 
 function backgroundParallax() {
     var backgroundParallaxCollection = $('.background-parallax-item')
@@ -615,10 +583,7 @@ $(document).ready(function() {
     })
 });
 
-// Google Maps Init
-if ($('div').is($('#google-map'))) {
-    google.maps.event.addDomListener(window, 'load', googleMapsInit);
-}
+
 // IE Masonry Fix
 $(window).on('scroll', function() {
     'use strict'

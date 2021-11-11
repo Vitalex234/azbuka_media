@@ -12,8 +12,8 @@
     <!-- Viewport (Need to responsive) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Framework/libraries/Plugins/style CSS-->
-    <link href="css/plugins/vendor.css" rel="stylesheet" type="text/css"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/plugins/vendor.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
 </head>
 <!-- head end-->
 <body>
@@ -26,7 +26,7 @@
             <div class="main-header-content">
                 <!-- logotype -->
                 <div class="main-header-logotype-container">
-                    <!-- Your Logotype --><a href="/"><img src="images/logo.webp" alt=""></a>
+                    <!-- Your Logotype --><a href="/"><img src="/images/logo.webp" alt=""></a>
                 </div>
                 <nav class="main-header-navigation">
                     <!-- Navigation Menu -->
@@ -55,8 +55,8 @@
         @yield('content')
     </div>
 </div>
-<script src="js/plugins/vendor.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/plugins/vendor.js"></script>
+<script src="/js/main.js"></script>
 @yield('scripts')
 </body>
 </html>
