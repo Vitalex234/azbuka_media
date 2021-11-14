@@ -15,7 +15,9 @@ class CreateProjectImagesTable extends Migration
     {
         Schema::create('project_images', function (Blueprint $table) {
             $table->id();
-            $table->integer('project_id');
+            $table->bigInteger('project_id')->unsigned();
+            $table->foreign('project_id')->references('id')->on('projects')
+                ->onUpdate('cascade')->onDelete('no action');
             $table->string('image');
             $table->boolean('is_main_image');
             $table->timestamps();
