@@ -19,7 +19,7 @@ class CreatePageContentsTable extends Migration
             $table->bigInteger('page_id')->unsigned();
             $table->foreign('page_id')->references('id')->on('pages')
                 ->onDelete('no action')->onUpdate('cascade');
-            $table->text('content');
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }

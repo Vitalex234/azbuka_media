@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Page extends Model
 {
     use HasFactory;
+
+    public function pageСontents()
+    {
+        return $this->hasMany(PageContent::class);
+    }
 }
