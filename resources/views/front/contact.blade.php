@@ -1,7 +1,9 @@
 @extends('front.master.layout')
 
 @section('head')
-    <title>Азбука Медиа. Контакты компании</title>
+    <title>{{ $meta->title }}</title>
+    <meta name="keywords" content="{{ $meta->keywords }}">
+    <meta name="description" content="{{ $meta->description }}">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=db5c5f9a-b0bc-4e1c-9b72-d75874b06bb8&lang=ru_RU" type="text/javascript">
     </script>
 @endsection
@@ -29,11 +31,11 @@
                     <div class="container container-custom">
                         <div class="row row-flex">
                             <div class="col-xs-12 col-md-6 contact-block-content">
-                                <h4>Контакты</h4>
+                                <h4>{{ $text->where('name','contact_title')->first()->content }}</h4>
                                 <ul>
-                                    <li>Email:  <b>samara@azbukamedia.ru</b></li>
-                                    <li>Телефон:  <b>+7 927 027 77 35</b></li>
-                                    <li>Адрес:  <b>443066, г. Самара, ул. 22 Партсъезда, д. 52, комн. 14</b></li>
+                                    <li>Email:  <b>{{ $text->where('name','contact_email')->first()->content }}</b></li>
+                                    <li>Телефон:  <b>{{ $text->where('name','contact_phone')->first()->content }}</b></li>
+                                    <li>Адрес:  <b>{{ $text->where('name','contact_address')->first()->content }}</b></li>
                                 </ul>
                             </div>
                             <div class="col-xs-12 col-md-6">
@@ -85,7 +87,7 @@
     properties: {
     // Контент метки.
     iconContent: '<b>Азбука медиа</b>',
-    hintContent: '<p>ул. 22 Партсъезда, д. 52, комн. 14</p>'
+    hintContent: '<p>{{ $text->where('name','contact_address')->first()->content }}</p>'
     }
     }, {
     // Опции.

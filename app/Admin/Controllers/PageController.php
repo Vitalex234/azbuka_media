@@ -32,6 +32,7 @@ class PageController extends AdminController
         $grid->column('title', __('Title'));
         $grid->column('keywords', __('Keywords'));
         $grid->column('description', __('Description'));
+        $grid->column('order', __('Order'))->sortable();
 //        $grid->column('created_at', __('Created at'));
 //        $grid->column('updated_at', __('Updated at'));
 
@@ -54,6 +55,7 @@ class PageController extends AdminController
         $show->field('title', __('Title'));
         $show->field('keywords', __('Keywords'));
         $show->field('description', __('Description'));
+        $show->field('order', __('Order'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -70,10 +72,11 @@ class PageController extends AdminController
         $form = new Form(new Page());
 
         $form->text('name', __('Name'));
-        $form->url('url', __('Url'));
+        $form->text('url', __('Url'));
         $form->text('title', __('Title'));
         $form->text('keywords', __('Keywords'));
         $form->text('description', __('Description'));
+        $form->number('order', __('Order'));
 
         return $form;
     }

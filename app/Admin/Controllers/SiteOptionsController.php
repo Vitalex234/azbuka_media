@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Image;
 
 class SiteOptionsController extends AdminController
 {
@@ -15,7 +16,7 @@ class SiteOptionsController extends AdminController
      *
      * @var string
      */
-    protected $title = 'SiteOptions';
+    protected $title = 'Настройки сайта';
 
     /**
      * Make a grid builder.
@@ -29,8 +30,7 @@ class SiteOptionsController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('content', __('Content'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('image_url', __('Image'))->image('',70,70);
 
         return $grid;
     }
@@ -48,6 +48,7 @@ class SiteOptionsController extends AdminController
         $show->field('id', __('Id'));
         $show->field('name', __('Name'));
         $show->field('content', __('Content'));
+        $show->field('image_url', __('Image'))->image('',200,200);
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -65,7 +66,12 @@ class SiteOptionsController extends AdminController
 
         $form->text('name', __('Name'));
         $form->text('content', __('Content'));
-
+        $form->image('image_url', __('Image'))->thumbnail([
+            'small' => [300, null],
+            'medium' => [1200, null],
+            'large' => [1920, null],
+        ]);
         return $form;
     }
 }
+

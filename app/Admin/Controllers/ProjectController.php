@@ -30,8 +30,7 @@ class ProjectController extends AdminController
         $grid->column('title', __('Title'));
         $grid->column('description', __('Description'));
         $grid->column('alias', __('Alias'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('image', __('Image'))->image('',70,70);
 
         return $grid;
     }
@@ -50,6 +49,7 @@ class ProjectController extends AdminController
         $show->field('title', __('Title'));
         $show->field('description', __('Description'));
         $show->field('alias', __('Alias'));
+        $show->field('image', __('Image'))->image('',200,200);
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -67,8 +67,11 @@ class ProjectController extends AdminController
 
         $form->text('title', __('Title'));
         $form->textarea('description', __('Description'));
-        $form->text('alias', __('Alias'));
-
+        $form->image('image', __('Image'))->thumbnail([
+            'small' => [300, null],
+            'medium' => [1200, null],
+            'large' => [1920, null],
+        ])->removable();
         return $form;
     }
 }

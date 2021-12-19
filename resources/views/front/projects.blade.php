@@ -1,7 +1,9 @@
 @extends('front.master.layout')
 
 @section('head')
-    <title>Азбука Медиа. Реализованные проекты</title>
+    <title>{{ $meta->title }}</title>
+    <meta name="keywords" content="{{ $meta->keywords }}">
+    <meta name="description" content="{{ $meta->description }}">
 @endsection
 
 @section('content')
@@ -24,7 +26,7 @@
             <!-- Content Block Item-->
             <div class="content-block-item">
                 <div class="container-fluid">
-                    <h3>Реализованные проекты</h3>
+                    <h3>{{ $text->where('name','projects_title')->first()->content }}</h3>
 
                     <div class="gallery-block gallery-block-masonry-gutter row">
                         <!-- Gallery Block Start -->

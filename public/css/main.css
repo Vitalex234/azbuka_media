@@ -2605,7 +2605,6 @@ input.error:hover, input.error:focus, input.error:active, textarea.error:hover, 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  font-family: 'object-fit: cover;';
 }
 
 .gallery-block-masonry-gutter .gallery-block-item {
@@ -2647,9 +2646,20 @@ input.error:hover, input.error:focus, input.error:active, textarea.error:hover, 
 }
 
 .gallery-block-item img {
-  width: 100%;
-  height: auto;
-  margin: 0;
+    width: 100%;
+    height: 260px;
+    margin: 0;
+    object-fit: cover;
+}
+
+.content-block-item .project-detail {
+    height: auto;
+}
+
+.content-block-item .project-detail img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .gallery-block-item:hover .gallery-block-item-content, .gallery-block-item:focus .gallery-block-item-content {

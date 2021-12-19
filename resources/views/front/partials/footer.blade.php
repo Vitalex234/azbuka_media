@@ -18,6 +18,6 @@
                 </form>
             </div>
         </div>--}}
-        <div class="footer-sub-footer"><span>© 2021 ООО «АЗБУКА МЕДИА»</span></div>
+        <div class="footer-sub-footer"><span>{{$copyright->content}}</span></div>
     </div>
 </footer>

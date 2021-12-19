@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+{{--    @dd($project)--}}
     <div class="shop-page">
         <!-- Content Header-->
         <header class="content-header">
@@ -27,9 +28,14 @@
             <!-- Content Block Item-->
             <div class="content-block-item">
                 <div class="container container-custom">
-                    <h3>Work Name </h3>
+                    <h3>{{$project->title}}</h3>
                     <div class="row row-flex">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2">
+                            <div class="gallery-item-gallery-item project-detail">
+                                <img src="/uploads/{{$project->thumbnail('medium','image')}}"  alt="{{$project->title}}">
+                            </div>
+                        </div>
+{{--                        <div class="col-xs-12 col-md-6">
                             <h4>Story about this work </h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic porro tenetur magnam doloremque, incidunt vitae reiciendis nemo asperiores quas explicabo molestias magni exercitationem illo voluptas repellendus distinctio, perferendis blanditiis voluptatum. ipsum dolor sit amet, consectetur adipisicing elit. Quidem nam, dolorum similique omnis excepturi ipsam impedit nihil, quis quisquam reiciendis, autem earum accusamus minima repellat quibusdam cum debitis eligendi? Unde. ipsum dolor sit amet, consectetur adipisicing elit. Non maxime explicabo nesciunt saepe numquam sint, eius iste id, mollitia, architecto at hic commodi ab consequatur ducimus alias veritatis quasi dolorem?</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi et recusandae tempora repudiandae animi, placeat tempore blanditiis assumenda voluptas officia soluta nihil nam vitae. Magni facere, eum dolore optio et.</p>
@@ -50,7 +56,7 @@
                                     <div class="gallery-item-gallery-item"><img src="/images/gallery-4.jpg" data-src="/images/gallery-4.jpg" alt=""></div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
             </div>

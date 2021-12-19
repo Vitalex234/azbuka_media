@@ -21,6 +21,12 @@ Route::group([
     $router->resource('project-images', ProjectImageController::class);
     $router->resource('site-options', SiteOptionsController::class);
     $router->resource('homepage', HomePageController::class);
+    $router->resource('aboutpage', AboutPageController::class);
+    $router->resource('contactpage', ContactPageController::class);
+    $router->resource('projectspage', ProjectsPageController::class);
+
+
+
 
 
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PageContent extends Model
 {
-    use HasFactory;
+    use HasFactory, \Encore\Admin\Traits\Resizable;
 
     public function page()
     {

@@ -26,7 +26,7 @@ Route::get('projects',
     [MainController::class, 'getProjects']
 )->name('projects');
 
-Route::get('project/{projectId}',
+Route::get('project/{projectAlias}',
     [MainController::class, 'getProject']
 )->name('projectItem');
 
