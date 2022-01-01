@@ -68,7 +68,11 @@ class HomePageController extends AdminController
         $form->text('name', __('Name'));
         $form->hidden('page_id', __('Page id'))->value($this->page_id);
         $form->textarea('content', __('Content'));
-        $form->image('image_url', __('Image'));
+        $form->image('image_url', __('Image'))->thumbnail([
+            'small' => [300, null],
+            'medium' => [1200, null],
+            'large' => [1920, null],
+        ])->removable();
 
         return $form;
     }

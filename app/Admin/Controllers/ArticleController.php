@@ -28,14 +28,12 @@ class ArticleController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('title', __('Title'));
-        $grid->column('image', __('Image'));
+        $grid->column('image', __('Image'))->image('',70,70);
         $grid->column('short_desc', __('Short desc'));
-        $grid->column('image_thumb', __('Image thumb'));
+        $grid->column('image_thumb', __('Image thumb'))->image('',70,70);
         $grid->column('full_content', __('Full content'));
         $grid->column('source_url', __('Source url'));
         $grid->column('alias', __('Alias'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -52,9 +50,9 @@ class ArticleController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('title', __('Title'));
-        $show->field('image', __('Image'));
+        $show->field('image', __('Image'))->image('',200,200);
         $show->field('short_desc', __('Short desc'));
-        $show->field('image_thumb', __('Image thumb'));
+        $show->field('image_thumb', __('Image thumb'))->image('',200,200);
         $show->field('full_content', __('Full content'));
         $show->field('source_url', __('Source url'));
         $show->field('alias', __('Alias'));
@@ -79,7 +77,6 @@ class ArticleController extends AdminController
         $form->text('image_thumb', __('Image thumb'));
         $form->textarea('full_content', __('Full content'));
         $form->text('source_url', __('Source url'));
-        $form->text('alias', __('Alias'));
 
         return $form;
     }

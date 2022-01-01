@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\ViewComposers;
+namespace App\ViewComposers;
 
 
 use App\Models\Page;
@@ -13,7 +13,6 @@ class NavigationComposer
 
     public function __construct(Page $page)
     {
-
         $this->pages = $page->orderBy('order')->get();
     }
 

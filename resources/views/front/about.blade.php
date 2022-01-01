@@ -11,10 +11,7 @@
         <!-- Content Header-->
         <header class="content-header">
             <!-- Sub Header Block-->
-            <div class="background-parallax" data-stellar-background-ratio="0.2"><img class="background-parallax-item"
-                                                                                      data-src="images/tochkarosta.jpg"
-                                                                                      src="images/tochkarosta.jpg"
-                                                                                      alt=""/></div>
+            @include('front.partials.main_image')
             <div class="home-background-overlay"></div>
             {{--            <div class="content-header-content">--}}
             {{--                <h2>Contact</h2>--}}

@@ -30,7 +30,7 @@ Route::get('project/{projectAlias}',
     [MainController::class, 'getProject']
 )->name('projectItem');
 
-Route::get('news/{newsId}',
+Route::get('news/{alias}',
     [MainController::class, 'getNewsItem']
 )->name('newsItem');
 

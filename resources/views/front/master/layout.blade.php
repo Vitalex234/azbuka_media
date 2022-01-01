@@ -25,30 +25,18 @@
         <header class="main-header">
             <div class="main-header-content">
                 <!-- logotype -->
-                <div class="main-header-logotype-container">
-                    <!-- Your Logotype --><a href="/"><img src="/images/logo.webp" alt=""></a>
-                </div>
+                @include('front.partials.logo')
                 <nav class="main-header-navigation">
                     <!-- Navigation Menu -->
                     @include('front.master.menu')
                 </nav>
             </div>
-            <!-- Main-header Social Link and part of info -->
-{{--            <div class="main-header-subcontent-container">--}}
-{{--                <!-- Social list -->--}}
-{{--                <ul class="main-header-social-list">--}}
-{{--                    <!-- Social Item -->--}}
-{{--                    <li class="main-header-social-item">--}}
-{{--                        <!-- Social Link --><a class="main-header-social-link" href="#">--}}
-{{--                            <!-- Social Icon --><i class="icon ion-social-twitter"></i></a>--}}
-{{--                    </li>--}}
-{{--                    <li class="main-header-social-item"> <a class="main-header-social-link" href="#"><i class="icon ion-social-facebook"></i></a></li>--}}
-{{--                    <li class="main-header-social-item"><a class="main-header-social-link" href="#"><i class="icon ion-social-github"></i></a></li>--}}
-{{--                    <li class="main-header-social-item"><a class="main-header-social-link" href="#"><i class="icon ion-social-pinterest"> </i></a></li>--}}
-{{--                    <li class="main-header-social-item"> <a class="main-header-social-link" href="#"><i class="icon ion-social-linkedin">   </i></a></li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
         </header>
+    </div>
+    <div class="main-header-toggle btn hidden-down-xs-flex">
+        <div class="main-header-toggle-icon">
+            <div class="main-header-toggle-icon-item"></div>
+        </div>
     </div>
 
     <div class="content-wrapper">

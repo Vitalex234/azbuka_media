@@ -32,7 +32,7 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            'root' => storage_path('app/public'),
         ],
 
         'public' => [
@@ -54,9 +54,9 @@ return [
         ],
         'admin' => [
             'driver' =>'local',
-            'root' => public_path('uploads'),
+            'root' => storage_path('app/public'),
             'visibility' =>'public',
-            'url' => env('APP_URL').'/uploads',
+            'url' => env('APP_URL').'/storage',
         ],
 
     ],
