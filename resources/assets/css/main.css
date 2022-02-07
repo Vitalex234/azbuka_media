@@ -3133,6 +3133,7 @@ input.error:hover, input.error:focus, input.error:active, textarea.error:hover, 
 ==================================================================
 */
 .preloader {
+    display: none;
   position: fixed;
   top: 0;
   left: 0;
