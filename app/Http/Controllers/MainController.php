@@ -64,8 +64,9 @@ class MainController extends Controller
             'email' => 'required|email',
             'text' => 'required'
         ]);
-//        dd($validated);
 
         Mail::to($validated['email'])->send(new Feedback($validated));
+
+        return response()->json('success', 200);
     }
 }

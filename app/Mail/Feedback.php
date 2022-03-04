@@ -29,6 +29,7 @@ class Feedback extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.feedback');
+        return $this->subject('Сообщение с сайта azbukamedia.ru')
+            ->view('mail.feedback');
     }
 }
