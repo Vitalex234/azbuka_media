@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
@@ -37,3 +38,8 @@ Route::get('news/{alias}',
 Route::get('contact',
     [MainController::class, 'getContact']
 )->name('contact');
+
+Route::post('feedback',
+    [MainController::class, 'sendEmail']
+)->name('sendEmail');
+

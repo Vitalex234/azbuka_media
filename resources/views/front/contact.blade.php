@@ -39,7 +39,8 @@
                                 </ul>
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <form>
+                                <form method="post">
+                                    @csrf
                                     <div class="row row-flex">
                                         <div class="col-xs-12 col-md-6">
                                             <input placeholder="Введите ваше имя" name="name" id="con_name">

@@ -197,7 +197,7 @@ function contactFormValidation() {
         },
         submitHandler: function(form) {
             $.ajax({
-                url: 'php/contact-sending.php',
+                url: 'feedback',
                 type: 'POST',
                 data: $(form).serialize(),
                 success: function(response) {
