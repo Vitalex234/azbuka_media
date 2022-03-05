@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\PageContent;
 use App\Models\SiteOptions;
 use App\ViewComposers\NavigationComposer;
 use Illuminate\Support\Facades\View;
@@ -38,6 +39,11 @@ class ComposerServiceProvider extends ServiceProvider
 
         View::composer('front.partials.main_image', function($view) {
             $view->with( 'mainImage', SiteOptions::select('image_url')->where('name', 'main_image')->get()->first());
+        });
+
+        View::composer('front.partials.modal', function($view) {
+            $view->with( 'modalContent', PageContent::select('content')->where('name', 'modal_content')->get()->first()->content);
+
         });
     }
 }
