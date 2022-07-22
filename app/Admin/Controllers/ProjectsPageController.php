@@ -49,7 +49,7 @@ class ProjectsPageController extends AdminController
         $show->field('id', __('Id'));
         $show->field('name', __('Name'));
         $show->field('content', __('Content'));
-        $show->field('image_url', __('Image'))->image('',200,200);;
+        $show->field('image_url', __('Image'))->image('',200,200);
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 

@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 Admin::routes();
 
 Route::group([
-    'prefix'        => config('admin.route.prefix'),
-    'namespace'     => config('admin.route.namespace'),
-    'middleware'    => config('admin.route.middleware'),
-    'as'            => config('admin.route.prefix') . '.',
+    'prefix'     => config('admin.route.prefix'),
+    'namespace'  => config('admin.route.namespace'),
+    'middleware' => config('admin.route.middleware'),
+    'as'         => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
@@ -24,10 +24,5 @@ Route::group([
     $router->resource('aboutpage', AboutPageController::class);
     $router->resource('contactpage', ContactPageController::class);
     $router->resource('projectspage', ProjectsPageController::class);
-
-
-
-
-
-
+    $router->resource('vendors', VendorController::class);
 });
