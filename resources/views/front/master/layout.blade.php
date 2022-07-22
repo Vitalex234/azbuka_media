@@ -39,6 +39,8 @@
         </div>
     </div>
 
+    @include('front.partials.modal')
+
     <div class="content-wrapper">
         @yield('content')
     </div>

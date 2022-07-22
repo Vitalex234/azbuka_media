@@ -33,6 +33,7 @@ class PageController extends AdminController
         $grid->column('keywords', __('Keywords'));
         $grid->column('description', __('Description'));
         $grid->column('order', __('Order'))->sortable();
+        $grid->column('have_modal', __('Modal'));
 //        $grid->column('created_at', __('Created at'));
 //        $grid->column('updated_at', __('Updated at'));
 
@@ -56,6 +57,7 @@ class PageController extends AdminController
         $show->field('keywords', __('Keywords'));
         $show->field('description', __('Description'));
         $show->field('order', __('Order'));
+        $show->field('have_modal', __('Modal'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -77,6 +79,7 @@ class PageController extends AdminController
         $form->text('keywords', __('Keywords'));
         $form->text('description', __('Description'));
         $form->number('order', __('Order'));
+        $form->number('have_modal', __('Modal'))->min(0)->max(1);
 
         return $form;
     }

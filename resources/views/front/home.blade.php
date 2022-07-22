@@ -110,6 +110,24 @@
                 </div>
             </div>
 
+            <div class="content-block-item">
+                <div class="vendor-block">
+                    <div class="container-fluid ">
+
+                        <div class="row row-flex">
+                            <div class="col-md-12 vendor-block-flex-container">
+                            <!-- Gallery Block Start -->
+                            @foreach ($vendors as $vendor)
+                                <div class="vendor-item">
+                                    <img src="{{ Storage::url($vendor->thumbnail('small','image')) }}" alt="" class="vendor-image">
+                                </div>
+                            @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- Content Footer  -->
         @include('front.partials.footer')

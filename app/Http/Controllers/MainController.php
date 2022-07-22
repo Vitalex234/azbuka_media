@@ -7,6 +7,7 @@ use App\Models\Article;
 use App\Models\Page;
 use App\Models\PageContent;
 use App\Models\Project;
+use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -18,7 +19,8 @@ class MainController extends Controller
         $meta = Page::where('id', 1)->select('title', 'keywords', 'description')->get()->first();
         $projects = Project::take(8)->get();
         $articles = Article::take(4)->get();
-        return view('front.home', compact('text', 'meta', 'projects', 'articles'));
+        $vendors = Vendor::select('image')->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
+        return view('front.home', compact('text', 'meta', 'projects', 'articles', 'vendors'));
     }
 
     public function getProjects()

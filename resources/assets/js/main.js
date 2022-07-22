@@ -392,14 +392,20 @@ function modal() {
     var modalWrapper = $('.modal-wrapper');
     var modalToggleWrapper = $('.modal-toggle');
     var modalItemClose = $('.modal-item-close');
+    var shopLink = '';
+    var modalFollowButton = $('.modal-follow');
     function modalToggle() {
         modalToggleWrapper.on('click', function(e) {
             e.preventDefault();
+            shopLink = e.target.href;
             modalWrapper.addClass('open');
         })
         modalItemClose.on('click', function(e) {
             e.preventDefault();
             modalWrapper.removeClass('open');
+        })
+        modalFollowButton.on('click', function(e) {
+            window.location.href = shopLink;
         })
     }
     $(document).mouseup(function (e){
@@ -506,12 +512,12 @@ function galleryItem() {
     galleryItemChange();
 }
 // Preloader
-// $(".preloader").fakeLoader({
-//     timeToHide:1200, //Time in milliseconds for fakeLoader disappear
-//     zIndex:"999",//Default zIndex
-//     spinner:"spinner6",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
-//     bgColor:"#333333", //Hex, RGB or RGBA colors
-// });
+ $(".preloader").fakeLoader({
+     timeToHide:280, //Time in milliseconds for fakeLoader disappear
+     zIndex:"999",//Default zIndex
+     spinner:"spinner6",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+     bgColor:"#333333", //Hex, RGB or RGBA colors
+ });
 
 $(document).ready(function() {
     'use strict'
