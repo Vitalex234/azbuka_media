@@ -30,13 +30,13 @@
                     <!-- Content -->
                     <div class="col-xs-12 col-md-12 col-lg-12 clearfix">
                         <div class="blog-single-block">
-                            <div class="blog-single-block-image"><img src="{{ $article->image }}"></div>
+                            <div class="blog-single-block-image"><img src="{{ $imagePath }}"></div>
                             <div class="blog-single-block-content">
                                 <h3>{{$article->title}}</h3>
                                 <div class="blog-single-block-content-description">
                                     <p>
                                         {{ $article->full_content }}</p>
-                                    @if ($article->source_url === 'self')
+                                    @if (!$article->source_url === 'self')
                                         <p>Иcточник: <a href="{{ $article->source_url }}">{{ $article->source_url }}</a></p>
                                     @endif
 

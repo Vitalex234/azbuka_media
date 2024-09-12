@@ -17,7 +17,7 @@ class MainController extends Controller
     {
         $text = PageContent::where('page_id', '1')->select('name', 'content', 'image_url')->get();
         $meta = Page::where('id', 1)->select('title', 'keywords', 'description')->get()->first();
-        $projects = Project::take(8)->get();
+        $projects = Project::take(8)->orderBy('id', 'desc')->get();
         $articles = Article::take(4)->get();
         $vendors = Vendor::select('image')->orderBy('sort', 'asc')->orderBy('id', 'desc')->get();
         return view('front.home', compact('text', 'meta', 'projects', 'articles', 'vendors'));
