@@ -27,7 +27,7 @@ class MainController extends Controller
     {
         $text = PageContent::where('page_id', '4')->select('name', 'content')->get();
         $meta = Page::where('id', 4)->select('title', 'keywords', 'description')->get()->first();
-        $projects = Project::take(8)->get();
+        $projects = Project::take(16)->orderBy('id', 'desc')->get();
         return view('front.projects', compact('text', 'meta', 'projects'));
     }
 

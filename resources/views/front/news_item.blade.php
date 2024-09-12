@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+    @php
+    $imagePath = $article->source_url === 'self' ? '/storage/' . $article->image : $article->image;
+    @endphp
     <div class="shop-page">
         <!-- Content Header-->
         <header class="content-header">
@@ -33,7 +36,10 @@
                                 <div class="blog-single-block-content-description">
                                     <p>
                                         {{ $article->full_content }}</p>
-                                    <p>Иcточник: <a href="{{ $article->source_url }}">{{ $article->source_url }}</a></p>
+                                    @if ($article->source_url === 'self')
+                                        <p>Иcточник: <a href="{{ $article->source_url }}">{{ $article->source_url }}</a></p>
+                                    @endif
+
 
                                 </div>
                             </div>
